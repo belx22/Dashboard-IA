@@ -1,0 +1,877 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+<div class="content-subheader">
+		
+			<div class="content-subheader__titles">
+					<h2 class="content-subheader__title">Appointments</h2>
+					<nav class="content-subheader__breadcrumb-menu">			
+							<ul>
+								<li><a href="dashboard.html">Dashboard</a></li>
+							</ul>
+					</nav>
+			</div>
+			
+			
+			<div class="content-subheader__options">
+			
+					<div class="content-subheader__buttons">
+							<a href="#" class="button button--blue-border button--general selected">Daily</a>
+							<a href="#" class="button button--blue-border button--general">Monthly</a>
+					</div>
+			
+					<div class="content-subheader__switcher switcher">
+							<div class="switcher__buttons">
+								<div class="switcher__button switcher__button--enabled">All</div> 
+								<div class="switcher__button">Urgent</div>
+								<div class="switcher__border"></div>
+							</div>
+					</div>
+					
+					<div class="content-subheader__dropdown" id="reportrange">
+						<span class="content-subheader__more show-more show-more--select show-more--select-gray"></span>
+					</div>
+					
+					<div class="content-subheader__slider-nav">
+						<div class="timeline__button--next swiper-button-next"></div>
+						<div class="timeline__button--prev swiper-button-prev"></div>
+					</div>
+			
+			</div>
+			
+		</div>
+		
+		<div class="timeline">					  
+						<div class="timeline__content swiper-wrapper">
+						
+							  <div class="timeline__slide swiper-slide">
+								<div class="timeline__header">
+								   <span class="timeline__header-day">25</span>
+									<span class="timeline__header-month">Monday</span>
+									<div class="timeline__header-todaybg"></div>
+									<div class="timeline__header-today">TODAY</div>
+								</div>
+								
+								<div class="timeline__grid scrollbar-macosx">
+										<div class="timeline__row">
+											<div class="timeline__hour">7 <span>AM</span></div>
+											<div class="timeline__details timeline__details--red">
+												<h3 class="timeline__user">Oliver Barnes</h3>
+												<div class="timeline__time">7 AM - 7:30 AM</div>
+												<div class="timeline__info timeline__info--red">URGENT</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd1"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd1"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">8 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">9 <span>AM</span></div>
+											<div class="timeline__details timeline__details--green">
+												<h3 class="timeline__user">Gracie Morris</h3>
+												<div class="timeline__time">9:30 AM - 10:00 AM</div>
+												<div class="timeline__info  timeline__info--green">Blood analysis</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd2"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd2"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">10 <span>AM</span></div>
+											<div class="timeline__details">
+												<h3 class="timeline__user">Adam King</h3>
+												<div class="timeline__time">10 AM - 10:30 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd3"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd3"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">11 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">12 <span>PM</span></div>
+											<div class="timeline__details timeline__details--blue">
+												<h3 class="timeline__user">Sienna Butler</h3>
+												<div class="timeline__time">12 AM - 12:30 AM</div>
+												<div class="timeline__info timeline__info--blue">Prenatal testing</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd4"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd4"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">1 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">2 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">3 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">4 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">5 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--buttons">
+											<a href="#" class="button button--general button--blue-border modal-toggle" data-openpopup="appointment">ADD APOINTMENT</a>
+										</div>
+								</div>
+	
+							  </div> <!--  End of one slide -->
+							  
+							  <div class="timeline__slide swiper-slide">
+								<div class="timeline__header">
+								        <span class="timeline__header-day">26</span>
+									<span class="timeline__header-month">Tuesday</span>
+								</div>
+								
+								<div class="timeline__grid scrollbar-macosx">
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">7 <span>AM</span></div>
+											<div class="timeline__details">
+
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">8 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">9 <span>AM</span></div>
+											<div class="timeline__details">
+												<h3 class="timeline__user">Emma Williams</h3>
+												<div class="timeline__time">9 AM - 9:20 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd5"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd5"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">10 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">11 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">12 <span>PM</span></div>
+											<div class="timeline__details">
+												<h3 class="timeline__user">Olivia Johnson</h3>
+												<div class="timeline__time">12 AM - 12:30 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd6"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd6"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">1 <span>PM</span></div>
+											<div class="timeline__details timeline__details--green">
+												<h3 class="timeline__user">Ava Jones</h3>
+												<div class="timeline__time">1 AM - 1:30 AM</div>
+												<div class="timeline__info timeline__info--green">Procedural dermatology</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd7"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd7"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">2 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">3 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">4 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">5 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--buttons">
+											<a href="#" class="button button--general button--blue-border modal-toggle" data-openpopup="appointment">ADD APOINTMENT</a>
+										</div>
+								</div>
+	
+							  </div> <!--  End of one slide -->
+							  <div class="timeline__slide swiper-slide">
+								<div class="timeline__header">
+								        <span class="timeline__header-day">27</span>
+									<span class="timeline__header-month">Wednesday</span>
+								</div>
+								
+								<div class="timeline__grid scrollbar-macosx">
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">7 <span>AM</span></div>
+											<div class="timeline__details">
+
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">8 <span>AM</span></div>
+											<div class="timeline__details timeline__details--blue">	
+												<h3 class="timeline__user">Isabella Brown</h3>
+												<div class="timeline__time">8 AM - 8:30 AM</div>
+												<div class="timeline__info timeline__info--blue">Abdominal radiology</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd8"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd8"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">9 <span>AM</span></div>
+											<div class="timeline__details timeline__details--red">	
+												<h3 class="timeline__user">Alexander Davies</h3>
+												<div class="timeline__time">9 AM - 9:30 AM</div>
+												<div class="timeline__info timeline__info--red">URGENT</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd9"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd9"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">10 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">11 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">12 <span>PM</span></div>
+											<div class="timeline__details">	
+												<h3 class="timeline__user">Oliver Thomas</h3>
+												<div class="timeline__time">12 AM - 12:30 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd10"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd10"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">1 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">2 <span>PM</span></div>
+											<div class="timeline__details">	
+												<h3 class="timeline__user">Amelia Miller</h3>
+												<div class="timeline__time">2 AM - 2:30 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd11"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd11"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">3 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">4 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">5 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--buttons">
+											<a href="#" class="button button--general button--blue-border modal-toggle" data-openpopup="appointment">ADD APOINTMENT</a>
+										</div>
+								</div>
+	
+							  </div> <!--  End of one slide -->	
+							  <div class="timeline__slide swiper-slide">
+								<div class="timeline__header">
+								        <span class="timeline__header-day">28</span>
+									<span class="timeline__header-month">Thursday</span>
+								</div>
+								
+								<div class="timeline__grid scrollbar-macosx">
+										<div class="timeline__row">
+											<div class="timeline__hour">7 <span>AM</span></div>
+											<div class="timeline__details">	
+												<h3 class="timeline__user">Joseph Johnson</h3>
+												<div class="timeline__time">7 AM - 7:30 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd12"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd12"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">8 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">9 <span>AM</span></div>
+											<div class="timeline__details">	
+												<h3 class="timeline__user">Ella Walker</h3>
+												<div class="timeline__time">9 AM - 9:30 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd13"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd13"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">10 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">11 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">12 <span>PM</span></div>
+											<div class="timeline__details timeline__details--green">	
+												<h3 class="timeline__user">Jackson Wright</h3>
+												<div class="timeline__time">12 AM - 12:30 AM</div>
+												<div class="timeline__info timeline__info--green">Chest radiology</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd14"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd14"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">1 <span>PM</span></div>
+											<div class="timeline__details timeline__details--blue">	
+												<h3 class="timeline__user">Penelope Martinez</h3>
+												<div class="timeline__time">1 AM - 1:30 AM</div>
+												<div class="timeline__info timeline__info--blue">Radiation oncology</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd15"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd15"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">2 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">3 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">4 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">5 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--buttons">
+											<a href="#" class="button button--general button--blue-border modal-toggle" data-openpopup="appointment">ADD APOINTMENT</a>
+										</div>
+								</div>
+	
+							  </div> <!--  End of one slide -->
+							  <div class="timeline__slide swiper-slide">
+								<div class="timeline__header">
+								        <span class="timeline__header-day">01</span>
+									<span class="timeline__header-month">Friday</span>
+								</div>
+								
+								<div class="timeline__grid scrollbar-macosx">
+										<div class="timeline__row">
+											<div class="timeline__hour">7 <span>AM</span></div>
+											<div class="timeline__details timeline__details--red">	
+												<h3 class="timeline__user">Audrey Baker</h3>
+												<div class="timeline__time">7 AM - 7:30 AM</div>
+												<div class="timeline__info timeline__info--red">URGENT</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd16"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd16"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">8 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">9 <span>AM</span></div>
+											<div class="timeline__details">	
+												<h3 class="timeline__user">Skylar Allen</h3>
+												<div class="timeline__time">9 AM - 9:30 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd17"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd17"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">10 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">11 <span>AM</span></div>
+											<div class="timeline__details">	
+												<h3 class="timeline__user">Isaiah Clark</h3>
+												<div class="timeline__time">11 AM - 11:30 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd18"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd18"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">12 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">1 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">2 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">3 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">4 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">5 <span>PM</span></div>
+											<div class="timeline__details timeline__details--green">	
+												<h3 class="timeline__user">Zoey Rodriguez</h3>
+												<div class="timeline__time">5 AM - 5:30 AM</div>
+												<div class="timeline__info timeline__info--green">Abdominal radiology</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd19"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd19"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--buttons">
+											<a href="#" class="button button--general button--blue-border modal-toggle" data-openpopup="appointment">ADD APOINTMENT</a>
+										</div>
+								</div>
+	
+							  </div> <!--  End of one slide -->	
+							  <div class="timeline__slide swiper-slide">
+								<div class="timeline__header">
+								        <span class="timeline__header-day">02</span>
+									<span class="timeline__header-month">Saturday</span>
+								</div>
+								
+								<div class="timeline__grid scrollbar-macosx">
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">7 <span>AM</span></div>
+											<div class="timeline__details">
+
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">8 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">9 <span>AM</span></div>
+											<div class="timeline__details">
+												<h3 class="timeline__user">Emma Williams</h3>
+												<div class="timeline__time">9 AM - 9:20 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd20"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd20"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">10 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">11 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">12 <span>PM</span></div>
+											<div class="timeline__details">
+												<h3 class="timeline__user">Olivia Johnson</h3>
+												<div class="timeline__time">12 AM - 12:30 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd21"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd21"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">1 <span>PM</span></div>
+											<div class="timeline__details timeline__details--green">
+												<h3 class="timeline__user">Ava Jones</h3>
+												<div class="timeline__time">1 AM - 1:30 AM</div>
+												<div class="timeline__info timeline__info--green">Procedural dermatology</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd22"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd22"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">2 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">3 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">4 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">5 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--buttons">
+											<a href="#" class="button button--general button--blue-border modal-toggle" data-openpopup="appointment">ADD APOINTMENT</a>
+										</div>
+								</div>
+	
+							  </div> <!--  End of one slide -->
+							  <div class="timeline__slide swiper-slide">
+								<div class="timeline__header">
+								        <span class="timeline__header-day">03</span>
+									<span class="timeline__header-month">Sunday</span>
+								</div>
+								
+								<div class="timeline__grid scrollbar-macosx">
+										<div class="timeline__row">
+											<div class="timeline__hour">7 <span>AM</span></div>
+											<div class="timeline__details timeline__details--red">
+												<h3 class="timeline__user">Oliver Barnes</h3>
+												<div class="timeline__time">7 AM - 7:30 AM</div>
+												<div class="timeline__info timeline__info--red">URGENT</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd23"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd23"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">8 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">9 <span>AM</span></div>
+											<div class="timeline__details timeline__details--green">
+												<h3 class="timeline__user">Gracie Morris</h3>
+												<div class="timeline__time">9:30 AM - 10:00 AM</div>
+												<div class="timeline__info  timeline__info--green">Blood analysis</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd24"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd24"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">10 <span>AM</span></div>
+											<div class="timeline__details">
+												<h3 class="timeline__user">Adam King</h3>
+												<div class="timeline__time">10 AM - 10:30 AM</div>
+												<div class="timeline__info">General examination</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd25"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd25"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">11 <span>AM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row">
+											<div class="timeline__hour">12 <span>PM</span></div>
+											<div class="timeline__details timeline__details--blue">
+												<h3 class="timeline__user">Sienna Butler</h3>
+												<div class="timeline__time">12 AM - 12:30 AM</div>
+												<div class="timeline__info timeline__info--blue">Prenatal testing</div>
+												<div class="timeline__more">
+													<span class="show-more show-more--ellipsis show-more--ellipsis-vertical has-dropdown" data-dropdown="tdropd26"></span>
+													<nav class="dropdown-menu dropdown-menu--content dropdown-menu--timeline" id="tdropd26"> 			
+														<ul>
+															<li><a href="#">Cancel</a></li>
+															<li><a href="#">Reschedule</a></li>
+															<li><a href="#">Contact patient</a></li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">1 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">2 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">3 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">4 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--empty">
+											<div class="timeline__hour">5 <span>PM</span></div>
+											<div class="timeline__details">
+											</div>
+										</div>
+										<div class="timeline__row timeline__row--buttons">
+											<a href="#" class="button button--general button--blue-border modal-toggle" data-openpopup="appointment">ADD APOINTMENT</a>
+										</div>
+								</div>
+	
+							  </div> <!--  End of one slide -->	  
+
+
+						</div>
+		
+	
+
+
+	
+
+
+{% endblock %}
