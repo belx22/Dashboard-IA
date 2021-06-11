@@ -78,13 +78,11 @@ WSGI_APPLICATION = 'IA.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'DATABASE':'ia',
+        'NAME':'ia',
         'HOST':'localhost',
         'USER':'root',
-        'PASSWORD':'',
-        'PORT':'3306'
-
-        
+   
+     
     }
 }
 
