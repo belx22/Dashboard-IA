@@ -11,4 +11,6 @@ urlpatterns = [
     path('dashboard__patients',views.lister_patient),
     path('dashboard__patient',views.profil_patient),
     path('message',views.message),
+    path('login',views.login, name="login"),
+    path('logout',views.logout, name="logout"),
 ]

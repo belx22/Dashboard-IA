@@ -90,169 +90,35 @@
 							</div>
 						</div>
 						<div class="table__body">
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-3.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Olivia Wilson</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/female.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/1980</div>
-								<div class="table__cell">olivia@wilson.com</div>
-								<div class="table__cell">+47 789 526 2222</div>
-								<div class="table__cell">Toronto, Canada</div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Appointment</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd1"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd1"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-1.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Oliver Barnes</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/male.png" alt="" title=""/></div>
-								<div class="table__cell">21/12/1975</div>
-								<div class="table__cell">oliver@barnes.com</div>
-								<div class="table__cell">+33 555 526 1111</div>
-								<div class="table__cell">Barcelona, Spain</div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Appointment</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd2"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd2"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
+							 {% for p in patient %}   
+									<div class="table__row">
+										<div class="table__cell"><div class="avatar-thumb"><img src="images/{{p.photo}}" alt="" title=""/></div></div>
+										<div class="table__cell">Dr. {{p.Nom}}</div>
+										<div class="table__cell">
+										  {% if p.genre == 'feminin' %}	
+										  		<img src="images/icons/icons-20-gray/female.png" alt="" title=""/>
+										  {% else %}
+										  		<img src="images/icons/icons-20-gray/male.png" alt="" title=""/>	  
+										  {% endif %}
+										</div>
+										<div class="table__cell">{{p.datenaissance}}</div>
+										<div class="table__cell">{{p.email}}</div>
+										<div class="table__cell">{{p.phone}}</div>
+										<div class="table__cell">{{p.adresse}}</div>
+										<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Appointment</a></div>
+										<div class="table__cell">
+											<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd1"></span>
+											<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd1"> 			
+												<ul>
+													<li><a href="dashboard__patient-profile.html">View Profile</a></li>
+													<li><a href="#">Contact</a></li>
+													<li><a href="#">Delete</a></li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+							 {% endfor %}
 							
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-2.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Maya Cooper</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/female.png" alt="" title=""/></div>
-								<div class="table__cell">07/06/1985</div>
-								<div class="table__cell">maya@cooper.com</div>
-								<div class="table__cell">+47 789 526 2222</div>
-								<div class="table__cell">Berlin, Germany</div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Appointment</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd3"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd3"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-4.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Adam King</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/male.png" alt="" title=""/></div>
-								<div class="table__cell">23/02/1975</div>
-								<div class="table__cell">adam@king.com</div>
-								<div class="table__cell">+45 111 526 6789</div>
-								<div class="table__cell">Paris, France</div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Appointment</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd4"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd4"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-5.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Julia Henderson</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/female.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/1980</div>
-								<div class="table__cell">julia@henderson.com</div>
-								<div class="table__cell">+47 333 526 2222</div>
-								<div class="table__cell">Tokyo, Japan</div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Appointment</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd5"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd5"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-6.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Sienna Butler</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/female.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/1980</div>
-								<div class="table__cell">sienna@butler.com</div>
-								<div class="table__cell">+47 789 526 2222</div>
-								<div class="table__cell">New York, USA</div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Appointment</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd6"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd6"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-7.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Robert Davis</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/male.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/1980</div>
-								<div class="table__cell">robert@davis.com</div>
-								<div class="table__cell">+35 333 526 2222</div>
-								<div class="table__cell">Amsterdam, Hollan</div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Appointment</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd5"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd5"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb"><img src="images/avatar-1.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Billy Ross</div>
-								<div class="table__cell"><img src="images/icons/icons-20-gray/male.png" alt="" title=""/></div>
-								<div class="table__cell">13/05/1980</div>
-								<div class="table__cell">billy@ross.com</div>
-								<div class="table__cell">+47 789 526 2222</div>
-								<div class="table__cell">Los Angeles, USA</div>
-								<div class="table__cell"><a href="#" class="button button--general button--inline button--blue-bg modal-toggle" data-openpopup="appointment">+ Appointment</a></div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd6"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd6"> 			
-										<ul>
-											<li><a href="dashboard__patient-profile.html">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-											<li><a href="#">Delete</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
 
 
 						</div>
@@ -267,10 +133,7 @@
 				<div class="grid__col grid__col--padding bg-white">
 					<ul class="pagination">
 						 <li><a href="#" class="pagination__current">1</a></li>
-						 <li><a href="#">2</a></li>
-						 <li><a href="#">3</a></li>
-						 <li><a href="#">4</a></li>
-						 <li><a href="#">5</a></li>
+					
 						 <li><a href="#">NEXT</a></li>
 					</ul>
 				</div>

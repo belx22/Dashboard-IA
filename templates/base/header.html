@@ -6,8 +6,8 @@
 			
 			<div class="content-header__user content-header__dropdown">  
 			    <div class="content-header__user-avatar content-header__dropdown-activate" data-dropdown="userdropdown">
-					<div class="content-header__user-thumb"><img src="/images/avatar-2.jpg" alt="" title=""/></div>
-					<span class="content-header__user-name">Nathalie Roberts</span>
+					<div class="content-header__user-thumb"><img src="/images/{{user.photo}}" alt="" title=""/></div>
+					<span class="content-header__user-name">{{user.Nom}}</span>
 			    </div>  
 				<nav class="dropdown-menu dropdown-menu--header dropdown-menu--user-menu " id="userdropdown"> 	
 				<h3 class="dropdown-menu__subtitle">User menu</h3>
@@ -16,7 +16,7 @@
 				    <li><a href="#">Activity</a></li>
 				    <li><a href="#">Switch account</a></li>
 				    <li><a href="#">Support</a></li>
-				    <li class="logout"><a href="#" class="button button--general button--red-border">Logout</a></li>
+				    <li class="logout"><a href="logout" class="button button--general button--red-border">Logout</a></li>
 				</ul>
 				</nav>
 			</div>
