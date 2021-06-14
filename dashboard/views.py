@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404,render,redirect
-from .models import Docteur,Patient,Hopital
+from .models import Docteur,Patient,Hopital,profil_sante,Message
 
 # Create your views here.
 
@@ -61,17 +61,21 @@ def ajouter_patient(request):
         return    render(request,'login/index.html')
     
 
-def profil_patient(request):
+def profil_patient(request, pk):
     if request.session.has_key('email_admin'):
         doc = get_object_or_404(Docteur,email=request.session['email_admin'])
+        pat = get_object_or_404(Patient,pk=pk)
+        profil = get_object_or_404(profil_sante,NomPatient = pk)
         patient = Patient.objects.all()
         docteur = Docteur.objects.all()
         hopital = Hopital.objects.all()
         liste = {
             'user':doc,
+            'pat':pat,
             'patient':patient,
             'docteur':docteur,
             'hopital':hopital,
+            'profil':profil,
         }
         return render(request,'dashboard__patient.html',liste)
     else:
@@ -96,11 +100,38 @@ def lister_patient(request):
 
 
 def message(request):
-    
-    return render(request,'home.html') 
+    if request.session.has_key('email_admin'):
+        doc = get_object_or_404(Docteur,email=request.session['email_admin'])
+        msg = Message.objects.filter(nomexpediteur= request.session['email_admin'])
+        patient = Patient.objects.all()
+        docteur = Docteur.objects.all()
+        hopital = Hopital.objects.all()
+        liste = {
+            'message':msg,
+            'user':doc,
+            'patient':patient,
+            'docteur':docteur,
+            'hopital':hopital,
+        }
+        return render(request,'dashboard__messages.html',liste) 
+    else:
+        return    render(request,'login/index.html')
 
 def rendezvous(request):
-    return render(request,'appointement.html')
+    if request.session.has_key('email_admin'):
+        doc = get_object_or_404(Docteur,email=request.session['email_admin'])
+        patient = Patient.objects.all()
+        docteur = Docteur.objects.all()
+        hopital = Hopital.objects.all()
+        liste = {
+            'user':doc,
+            'patient':patient,
+            'docteur':docteur,
+            'hopital':hopital,
+        }
+        return render(request,'dashboard__appointments.html',liste)
+    else:
+        return    render(request,'login/index.html')
 
 
 def login(request):

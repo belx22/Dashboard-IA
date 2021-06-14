@@ -106,37 +106,14 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>	
 			<div class="grid__row">
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding gradient-blue widget-icon selected">
-						<span class="widget-icon__badge">3 NEW</span>
-						<img src="/images/icons/icons-64-white/chat.png" alt="" title=""/>
-						<h5>Active Conversations</h5>
-				</div>
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding gradient-lightblue widget-icon selected">
-						<span class="widget-icon__badge">14 NEW</span>
-						<img src="/images/icons/icons-64-white/laboratory.png" alt="" title=""/>
-						<h5>Laboratory Results</h5>
-				</div>
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding gradient-pink widget-icon selected">
-						<span class="widget-icon__badge">2 NEW</span>
-						<img src="/images/icons/icons-64-white/calendar.png" alt="" title=""/>
-						<h5>New Events</h5>
-				</div>
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding bg-white widget-icon">
-						<img src="/images/icons/icons-64-blue/users.png" alt="" title=""/>
-						<h5>Important Patients</h5>
-				</div>
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding bg-white widget-icon">
-						<img src="/images/icons/icons-64-blue/reports.png" alt="" title=""/>
-						<h5>Reports Archive</h5>
-				</div>
-				<div class="grid__col grid__col--16 grid__col--mb-12 grid__col--margin grid__col--padding bg-white widget-icon">
-						<img src="/images/icons/icons-64-blue/payments.png" alt="" title=""/>
-						<h5>Payments</h5>
+				
+					<!-- TABLE end -->
 				</div>
 
-			</div>	
+			</div>
+			
 			<div class="grid__row">
 				<div class="grid__col grid__col--23 grid__col--margin grid__col--padding bg-white">
 					<div class="grid__row justify-sb">
@@ -153,7 +130,7 @@
 							<li><a href="#">More Details</a></li>
 							<li><a href="#">View Activity</a></li>
 							<li><a href="#">Edit Settings</a></li>
-						
+							<li><a href="#">+ Add widget</a></li>
 						</ul>
 					</nav>
 					<canvas id="ActivityChart" width="100%" height="40"></canvas>
@@ -177,92 +154,25 @@
 					</nav>
 					<div class="table table--no-header table--new-doctors">
 						<div class="table__body">
-							<div class="table__row selected">
-								<div class="table__cell"><div class="avatar-thumb avatar-thumb--table"><img src="images/avatar-3.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Olivia Wilson</div>
-								<div class="table__cell color-blue">Cardiology	</div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd1"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd1"> 			
-										<ul>
-											<li><a href="#">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb avatar-thumb--table"><img src="images/avatar-1.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Oliver Barnes</div>
-								<div class="table__cell color-blue">Pathology 	</div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd2"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd2"> 			
-										<ul>
-											<li><a href="#">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
 							
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb avatar-thumb--table"><img src="images/avatar-2.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Maya Cooper</div>
-								<div class="table__cell color-blue">Gastroenterology</div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd3"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd3"> 			
-										<ul>
-											<li><a href="#">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb avatar-thumb--table"><img src="images/avatar-4.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Adam King</div>
-								<div class="table__cell color-blue">Endocrinology	</div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd4"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd4"> 			
-										<ul>
-											<li><a href="#">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
+					
 							
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb avatar-thumb--table"><img src="images/avatar-5.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Julia Henderson</div>
-								<div class="table__cell color-blue">Orthodontics</div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd5"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd5"> 			
-										<ul>
-											<li><a href="#">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-										</ul>
-									</nav>
+							{% for p in patient %}
+								<div class="table__row">
+									<div class="table__cell"><div class="avatar-thumb avatar-thumb--table"><img src="images/{{p.photo}}" alt="" title=""/></div></div>
+									<div class="table__cell">{{p.Nom}}</div>
+									<div class="table__cell color-blue">Orthodontics</div>
+									<div class="table__cell">
+										<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd5"></span>
+										<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd5"> 			
+											<ul>
+												<li><a href="#">View Profile</a></li>
+												<li><a href="#">Contact</a></li>
+											</ul>
+										</nav>
+									</div>
 								</div>
-							</div>
-							<div class="table__row">
-								<div class="table__cell"><div class="avatar-thumb avatar-thumb--table"><img src="images/avatar-6.jpg" alt="" title=""/></div></div>
-								<div class="table__cell">Sienna Butler</div>
-								<div class="table__cell color-blue">Paediatrics</div>
-								<div class="table__cell">
-									<span class="show-more show-more--ellipsis has-dropdown" data-dropdown="dropd6"></span>
-									<nav class="dropdown-menu dropdown-menu--content dropdown-menu--table" id="dropd6"> 			
-										<ul>
-											<li><a href="#">View Profile</a></li>
-											<li><a href="#">Contact</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
+							{% endfor %}
 
 						</div>
 						
@@ -271,8 +181,6 @@
 				</div>
 
 			</div>
-			
-			
 			<div class="grid__row grid__row--d-block">
 				<div class="grid__col grid__col--margin grid__col--padding bg-white">
 					<div class="grid__row justify-sb">
@@ -320,129 +228,7 @@
 								</div>
 							  </div>
 							  
-							  <div class="appointments__slide swiper-slide">
-							        <div class="appointment__time" id="time-user2"></div>
-								<div class="appointment__header">
-									<div class="appointment__thumb"><img src="images/avatar-2.jpg" alt="" title=""/></div>
-									<div class="appointment__header-details">
-										<div class="appointment__username">Jada Sacks</div>
-										<div class="appointment__user-phone"><a href="tel:889400322">+889 400322</a></div>
-									</div>
-								</div>
-								<div class="appointment__content">
-								        <div class="appointment__info-content icon-doctor">Cardiology, Dr. Michael V.</div>
-									<div class="appointment__info-content icon-location">T600 Medical Center, Room 2</div>
-									<div class="appointment__info-content icon-calendar">Wednesday, February 18, 2019</div>
-									<div class="appointment__info-content icon-clock"><strong>08:00 - 09:30</strong></div>
-								</div>
-								<div class="appointment__buttons">
-									<button class="appointment__button appointment__button--confirm">Confirm</button>
-									<button class="appointment__button appointment__button--cancel">Cancel</button>
-								</div>
-							  </div>
 							  
-							  <div class="appointments__slide swiper-slide">
-								<div class="appointment__header">
-									<div class="appointment__thumb"><img src="images/avatar-3.jpg" alt="" title=""/></div>
-									<div class="appointment__header-details">
-										<div class="appointment__username">Jenifer Vandebild</div>
-										<div class="appointment__user-email"><a href="mailto:email@website.com">jenifer@vanderbild.com</a></div>
-
-									</div>
-								</div>
-								<div class="appointment__content">
-								        <div class="appointment__info-content icon-doctor">Gastroenterology, Dr. Joshua A.</div>
-									<div class="appointment__info-content icon-location">54 Medical Center, Room 34</div>
-									<div class="appointment__info-content icon-calendar">Friday, February 09, 2019</div>
-									<div class="appointment__info-content icon-clock"><strong>10:00 - 10:30</strong></div>
-								</div>
-								<div class="appointment__buttons">
-									<button class="appointment__button appointment__button--confirm">Confirm</button>
-									<button class="appointment__button appointment__button--cancel">Cancel</button>
-								</div>
-							  </div>
-							  
-							  <div class="appointments__slide swiper-slide">
-								<div class="appointment__header">
-									<div class="appointment__thumb"><img src="images/avatar-4.jpg" alt="" title=""/></div>
-									<div class="appointment__header-details">
-										<div class="appointment__username">Michael Smith</div>
-
-										<div class="appointment__user-phone"><a href="tel:889400322">+781 554689</a></div>
-									</div>
-								</div>
-								<div class="appointment__content">
-								        <div class="appointment__info-content icon-doctor">Endocrinology, Dr. Joshua A.</div>
-									<div class="appointment__info-content icon-location">83 Medical Center, Room 01</div>
-									<div class="appointment__info-content icon-calendar">Wednesday, February 28, 2019</div>
-									<div class="appointment__info-content icon-clock"><strong>09:30 - 10:30</strong></div>
-								</div>
-								<div class="appointment__buttons">
-									<button class="appointment__button appointment__button--confirm">Confirm</button>
-									<button class="appointment__button appointment__button--cancel">Cancel</button>
-								</div>
-							  </div>
-							  
-							  <div class="appointments__slide swiper-slide">
-								<div class="appointment__header">
-									<div class="appointment__thumb"><img src="images/avatar-5.jpg" alt="" title=""/></div>
-									<div class="appointment__header-details">
-										<div class="appointment__username">Sarah Smithson</div>
-										<div class="appointment__user-email"><a href="mailto:email@website.com">sarah@smitson.com</a></div>
-	
-									</div>
-								</div>
-								<div class="appointment__content">
-								        <div class="appointment__info-content icon-doctor">Orthodontics, Dr. Victoria B.</div>
-									<div class="appointment__info-content icon-location">54 Medical Center, Room 34</div>
-									<div class="appointment__info-content icon-calendar">Monday, February 28, 2019</div>
-									<div class="appointment__info-content icon-clock"><strong>10:00 - 10:30</strong></div>
-								</div>
-								<div class="appointment__buttons">
-									<button class="appointment__button appointment__button--confirm">Confirm</button>
-									<button class="appointment__button appointment__button--cancel">Cancel</button>
-								</div>
-							  </div>
-							  
-							  <div class="appointments__slide swiper-slide">
-								<div class="appointment__header">
-									<div class="appointment__thumb"><img src="images/avatar-6.jpg" alt="" title=""/></div>
-									<div class="appointment__header-details">
-										<div class="appointment__username">Alicia Kimston</div>
-										<div class="appointment__user-phone"><a href="tel:889400322">+333 400322</a></div>
-									</div>
-								</div>
-								<div class="appointment__content">
-								        <div class="appointment__info-content icon-doctor">Neonatology, Dr. Alexa A.</div>
-									<div class="appointment__info-content icon-location">54 Medical Center, Room 34</div>
-									<div class="appointment__info-content icon-calendar">Tuesday, March 01, 2019</div>
-									<div class="appointment__info-content icon-clock"><strong>10:00 - 10:30</strong></div>
-								</div>
-								<div class="appointment__buttons">
-									<button class="appointment__button appointment__button--confirm">Confirm</button>
-									<button class="appointment__button appointment__button--cancel">Cancel</button>
-								</div>
-							  </div>
-							  
-							  <div class="appointments__slide swiper-slide">
-								<div class="appointment__header">
-									<div class="appointment__thumb"><img src="images/avatar-7.jpg" alt="" title=""/></div>
-									<div class="appointment__header-details">
-										<div class="appointment__username">Duran Jackson</div>
-										<div class="appointment__user-email"><a href="mailto:email@website.com">duran@jackson.com</a></div>
-									</div>
-								</div>
-								<div class="appointment__content">
-								        <div class="appointment__info-content icon-doctor">Psychiatry, Dr. Aby D.</div>
-									<div class="appointment__info-content icon-location">Main Hospital Center, Room 12, 3'rd fl</div>
-									<div class="appointment__info-content icon-calendar">Friday, March 12, 2019</div>
-									<div class="appointment__info-content icon-clock"><strong>14:00 - 15:30</strong></div>
-								</div>
-								<div class="appointment__buttons">
-									<button class="appointment__button appointment__button--confirm">Confirm</button>
-									<button class="appointment__button appointment__button--cancel">Cancel</button>
-								</div>
-							  </div>
 
 						</div>
 					
@@ -517,26 +303,7 @@
 					<canvas id="ReportsChart" width="100%" height="40"></canvas>
 					<div class="table table--no-header table--latest-reports">
 						<div class="table__body">
-							<div class="table__row">
-								<div class="table__cell">Infectious disease.pdf</div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
-							</div>
-							<div class="table__row">
-								<div class="table__cell">Paediatric.doc</div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
-							</div>
-							<div class="table__row">
-								<div class="table__cell">Hepatology.pdf</div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
-							</div>
-							<div class="table__row">
-								<div class="table__cell">General Surgery.doc</div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--lightblue-bg">View</a></div>
-								<div class="table__cell"><a href="#" class="button button--small-table button--blue-bg">Download</a></div>		
-							</div>
+						
 						</div>
 						
 					</div>

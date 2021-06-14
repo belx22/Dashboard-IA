@@ -133,3 +133,15 @@ class info_medicale(models.Model):
     periode = models.CharField(default="",max_length=200) 
     def __str__(self):
         return "info medicale du  :  %s" % self.NomPatient
+class profil_sante(models.Model):
+    NomPatient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    Blood = models.IntegerField(default=0)
+    Heart= models.IntegerField(default=0)
+    Glucose = models.IntegerField(default=0)
+    Cholesterol = models.IntegerField(default=0)
+    BloodType = models.CharField(default="A+",max_length=200)
+    Allergies = models.CharField(default="sugar",max_length=200)
+    Diseases = models.CharField(default="Diabetis",max_length=200)
+    def __str__(self):
+        return 'info de sante du :% s' % self.NomPatient
+

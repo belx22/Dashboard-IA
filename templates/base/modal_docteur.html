@@ -291,3 +291,66 @@
         
 		</div>
  </div> 
+
+
+
+ 
+  <!-- Modal - Email --> 
+<div class="modal modal--email">
+		
+		<div class="modal__overlay modal__overlay--toggle"></div>
+		<div class="modal__wrapper modal-transition">
+		  
+		<div class="modal__body">
+			<div class="modal__header">
+				<h2 class="modal__header-title">Write a new message</h2>
+				<div class="modal__close modal__overlay--toggle"><span></span></div>
+			</div>
+			<div class="modal__content">					
+		
+				<div class="grid">
+					<div class="grid__row grid__row--margin">
+						<div class="grid__col grid__col--margin">
+							<h3 class="grid__col-title">Message Information</h3>
+						</div>		
+					</div>
+					<div class="grid__row grid__row--margin">
+						<div class="grid__col grid__col--margin">
+							<label class="form__label">To:</label>
+							<select class="custom-select" name="appname">
+							{% for p in patient %}
+								<option value="Patient Name">{{ p.Nom }}</option>
+							{% endfor %}
+
+							</select>
+						</div>
+					</div>
+
+					<div class="grid__row grid__row--margin">
+						<div class="grid__col grid__col--margin">
+									<label class="form__label">SUBJECT</label>
+									<input type="text" name="subject" class="form__input" value="" />
+						</div>
+					</div>
+					<div class="grid__row grid__row--margin">
+						<div class="grid__col grid__col--margin">
+									<label class="form__label">MESSAGE</label>
+									<textarea name="message" class="form__textarea" placeholder="You message here"></textarea>
+						</div>
+					</div>	
+
+					<div class="grid__row grid__row--margin">
+						<div class="grid__col grid__col--margin">
+							<input type="submit" name="submit" class="button button--submit button--blue-bg" id="submit" value="SEND" />	
+						</div>
+					</div>
+				</div> <!-- End of Grid -->
+
+			</div> 
+
+			
+		</div>
+
+		</div>
+ </div> 
+ 

@@ -9,8 +9,8 @@ urlpatterns = [
     path('dashboard__doctors',views.lister_docteur,name="list_docteur"),  
     path('dashboard__patients-add',views.ajouter_patient),
     path('dashboard__patients',views.lister_patient),
-    path('dashboard__patient',views.profil_patient),
-    path('message',views.message),
+    path('dashboard__patient/<int:pk>',views.profil_patient,name='profil'),
+    path('dashboard__messages',views.message),
     path('login',views.login, name="login"),
     path('logout',views.logout, name="logout"),
 ]
