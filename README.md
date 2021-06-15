@@ -8,3 +8,5 @@ IL permet a un administrateur de la plateforme principale d'effectuer des maniqu
  Pour avoir un apercu de notre projet veuillez vous rendre sur : belx22.pythonanywhere.com/login
  pour cette exemple on prendra comme login: polytechnique@gmail.com 
                                      Mot de passe : laisser vide
+![11](https://user-images.githubusercontent.com/26586030/122042107-05467400-cdda-11eb-982b-ab578bd7e21b.png)
+![222](https://user-images.githubusercontent.com/26586030/122042755-d67ccd80-cdda-11eb-92bd-c180eb3adb63.png)
